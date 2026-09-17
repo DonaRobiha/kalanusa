@@ -69,12 +69,13 @@ class _SplashScreenState extends State<SplashScreen> {
               const SizedBox(height: 10),
 
               const Text(
-                'Kalender dan Waktu',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: AppColors.textDark,
-                ),
-              ),
+  'Travel Planner Nusantara',
+  style: TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textDark,
+  ),
+),
 
               const SizedBox(height: 40),
 

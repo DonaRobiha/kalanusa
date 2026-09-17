@@ -8,6 +8,7 @@ import 'travel_plan_screen.dart';
 import 'date_converter_screen.dart';
 import 'nusantara_calendar_screen.dart';
 import 'stopwatch_screen.dart';
+import 'help_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -324,83 +325,8 @@ class _HomeScreenState extends State<HomeScreen> {
   // BANTUAN
   // =========================
   Widget buildHelpPage() {
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Bantuan',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w800,
-                color: AppColors.blue,
-              ),
-            ),
-
-            const SizedBox(height: 10),
-
-            const Text(
-              'KALANUSA membantu kamu merencanakan perjalanan '
-              'dan mengenal berbagai informasi Nusantara.',
-              style: TextStyle(
-                fontSize: 14,
-                color: AppColors.textDark,
-              ),
-            ),
-
-            const SizedBox(height: 25),
-
-            // =========================
-            // TENTANG KALANUSA
-            // =========================
-            Card(
-              child: ListTile(
-                leading: const Icon(
-                  Icons.info_outline,
-                  color: AppColors.blue,
-                ),
-                title: const Text(
-                  'Tentang KALANUSA',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                subtitle: const Text(
-                  'Travel Planner Nusantara',
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 12),
-
-            // =========================
-            // KELUAR
-            // =========================
-            Card(
-              child: ListTile(
-                leading: const Icon(
-                  Icons.logout,
-                  color: AppColors.blue,
-                ),
-                title: const Text(
-                  'Keluar',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                subtitle: const Text(
-                  'Keluar dari halaman utama',
-                ),
-                onTap: logout,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  return const HelpScreen();
+}
 
   // =========================
   // BUILD
