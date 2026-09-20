@@ -35,7 +35,7 @@ class AnggotaScreen extends StatelessWidget {
                 vertical: 8,
               ),
               leading: CircleAvatar(
-                backgroundColor: AppColors.offWhite,
+                backgroundColor: AppColors.blue.withValues(alpha: 0.1),
                 child: Text(
                   '${index + 1}',
                   style: const TextStyle(
