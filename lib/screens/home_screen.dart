@@ -9,6 +9,7 @@ import 'travel_plan_screen.dart';
 import 'date_converter_screen.dart';
 import 'nusantara_calendar_screen.dart';
 import 'stopwatch_screen.dart';
+import 'help_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,6 +21,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
 
+<<<<<<< HEAD
+=======
+  // =========================
+  // MENU UTAMA KALANUSA
+  // =========================
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
   final List<String> menuTitles = [
     'Daftar Anggota',
     'Destinasi Nusantara',
@@ -47,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Icons.public_outlined,
   ];
 
+<<<<<<< HEAD
   // Destinasi wisata unggulan untuk showcase di bawah KALANUSA
   final List<Map<String, String>> popularDestinations = [
     {
@@ -91,6 +99,11 @@ class _HomeScreenState extends State<HomeScreen> {
     },
   ];
 
+=======
+  // =========================
+  // LOGOUT
+  // =========================
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
   void logout() {
     Navigator.pushAndRemoveUntil(
       context,
@@ -109,6 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
           builder: (context) => const AnggotaScreen(),
         ),
       );
+<<<<<<< HEAD
     } else if (index == 1) {
       Navigator.push(
         context,
@@ -424,6 +438,65 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+=======
+      return;
+    }
+
+    if (index == 1) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const DestinasiScreen(),
+        ),
+      );
+      return;
+    }
+
+    if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const TravelCalculatorScreen(),
+        ),
+      );
+      return;
+    }
+
+    if (index == 3) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const TravelPlanScreen(),
+        ),
+      );
+      return;
+    }
+
+    if (index == 4) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const DateConverterScreen(),
+        ),
+      );
+      return;
+    }
+
+    if (index == 5) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const NusantaraCalendarScreen(),
+        ),
+      );
+      return;
+    }
+  }
+
+  // =========================
+  // HALAMAN UTAMA
+  // =========================
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
   Widget buildHomePage() {
     return SafeArea(
       child: SingleChildScrollView(
@@ -431,6 +504,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+<<<<<<< HEAD
             // HEADER HERO KALANUSA DENGAN GAMBAR & EFEK TRANSPARAN ELEGAN
             Container(
               width: double.infinity,
@@ -696,25 +770,83 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 26),
 
             // JUDUL MENU UTAMA
+=======
+            // =========================
+            // HEADER / HERO
+            // =========================
+        Container(
+  width: double.infinity,
+  padding: const EdgeInsets.symmetric(
+    horizontal: 28,
+    vertical: 10,
+  ),
+  decoration: BoxDecoration(
+    color: AppColors.cream,
+    borderRadius: BorderRadius.circular(24),
+  ),
+  child: Row(
+    children: [
+      Expanded(
+        flex: 5,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'KALANUSA',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+                color: AppColors.blue,
+                letterSpacing: 1,
+              ),
+            ),
+            const SizedBox(height: 4),
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
             const Text(
               'Menu Utama',
               style: TextStyle(
+<<<<<<< HEAD
                 fontSize: 21,
                 fontWeight: FontWeight.w800,
+=======
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
                 color: AppColors.textDark,
               ),
             ),
-
-            const SizedBox(height: 4),
-
+            const SizedBox(height: 8),
             const Text(
+<<<<<<< HEAD
               'Pilih fitur yang ingin kamu gunakan.',
+=======
+              'Rencanakan perjalananmu,\njelajahi Nusantara.',
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
               style: TextStyle(
                 fontSize: 13,
                 color: AppColors.textDark,
+                height: 1.4,
               ),
             ),
+          ],
+        ),
+      ),
 
+      const SizedBox(width: 10),
+
+      Expanded(
+        flex: 6,
+        child: Image.asset(
+          'assets/images/KALANUSA.png',
+          height: 190,
+          fit: BoxFit.contain,
+        ),
+      ),
+    ],
+  ),
+),
+
+<<<<<<< HEAD
             const SizedBox(height: 16),
 
             // DAFTAR MENU UTAMA
@@ -722,6 +854,111 @@ class _HomeScreenState extends State<HomeScreen> {
               menuTitles.length,
               (index) {
                 return buildFeatureCard(index);
+=======
+            const SizedBox(height: 28),
+
+            // =========================
+            // JUDUL MENU
+            // =========================
+            const Text(
+              'Menu Utama',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w800,
+                color: AppColors.textDark,
+              ),
+            ),
+
+            const SizedBox(height: 14),
+
+            // =========================
+            // DAFTAR MENU
+            // =========================
+            ...List.generate(
+              menuTitles.length,
+              (index) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: Card(
+                    margin: EdgeInsets.zero,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(18),
+                      onTap: () {
+                        bukaMenu(index);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 14,
+                        ),
+                        child: Row(
+                          children: [
+                            // =========================
+                            // ICON
+                            // =========================
+                            Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: AppColors.offWhite,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Icon(
+                                menuIcons[index],
+                                color: AppColors.blue,
+                                size: 26,
+                              ),
+                            ),
+
+                            const SizedBox(width: 15),
+
+                            // =========================
+                            // TEXT
+                            // =========================
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    menuTitles[index],
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w800,
+                                      color: AppColors.textDark,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                    menuDescriptions[index],
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: AppColors.textDark.withOpacity(
+                                        0.75,
+                                      ),
+                                      height: 1.3,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            const SizedBox(width: 8),
+
+                            // =========================
+                            // ARROW
+                            // =========================
+                            const Icon(
+                              Icons.chevron_right_rounded,
+                              color: AppColors.blue,
+                              size: 25,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
               },
             ),
           ],
@@ -730,11 +967,18 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+<<<<<<< HEAD
+=======
+  // =========================
+  // STOPWATCH
+  // =========================
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
   Widget buildStopwatchPage() {
     return const StopwatchScreen();
   }
 
   Widget buildHelpPage() {
+<<<<<<< HEAD
     return SafeArea(
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
@@ -800,6 +1044,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+=======
+  return const HelpScreen();
+}
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
 
   // NAVBAR ALA APLIKASI TRAVEL: TRANSPARAN & ELEGAN
   Widget buildTravelNavBar() {
@@ -932,14 +1180,24 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return Scaffold(
+<<<<<<< HEAD
       extendBody: true, // Memungkinkan efek transparan navbar yang elegan
+=======
+      // =========================
+      // APP BAR
+      // =========================
+>>>>>>> 62fd8520bfa7a1f5c064d9928b6925ae91f1226c
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
           selectedIndex == 0
               ? 'Halaman Utama'
               : selectedIndex == 1
                   ? 'Stopwatch'
                   : 'Bantuan',
+          style: const TextStyle(
+            fontWeight: FontWeight.w800,
+          ),
         ),
       ),
       body: pages[selectedIndex],
